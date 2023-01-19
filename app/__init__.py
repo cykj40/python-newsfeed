@@ -1,6 +1,10 @@
 from flask import Flask
 from app.routes import home, dashboard
 
+
+
+
+
 def create_app(test_config=None):
   # set up app config
   app = Flask(__name__, static_url_path='/')
@@ -16,6 +20,7 @@ def create_app(test_config=None):
   # register blueprints
   app.register_blueprint(home)
   app.register_blueprint(dashboard)
+
 
   return app
 
