@@ -18,7 +18,7 @@ class Post(Base):
   comments = relationship('Comment', cascade='all, delete')
   votes = relationship("Vote", backref="post")
   vote_count = column_property(
-        select([func.count()]).where(Vote.c.post_id == id).label('vote_count').scalar_subquery()
+   select([func.count(Vote.id)]).where(Vote.post_id == id)
     )
     
 
