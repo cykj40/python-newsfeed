@@ -10,4 +10,13 @@ requests==2.22.0
 urllib3==1.25.11
 sqlalchemy==1.4.46
 bcrypt==4.0.1
+cffi==1.14.6
+cryptography==3.4.8
+pycparser==2.20
+pycryptodome==3.10.4
+pycryptodomex==3.10.4
+pyOpenSSL==20.0.1
+six==1.16.0
+Flask==2.0.2
+```
 
