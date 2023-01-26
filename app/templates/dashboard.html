@@ -24,12 +24,29 @@
     {% for post in posts %}
     <li>
       {% include "partials/post-info.html" %}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <form action="/dashboard/edit/{{post.id}}" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="submit" value="Edit post">
+      </form>
     </li>
     {% endfor %}
   </ol>
 </section>
 {% endif %}
+
+<!-- {% if posts|length > 0 %}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {% for post in posts %}
+    <li>
+      {% include "partials/post-info.html" %}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %} -->
 
 <script src="/javascript/add-post.js"></script>
 {% endblock %}
